@@ -76,21 +76,6 @@
 		<input type="hidden" name="pageNo" value="<%=pageNo%>">
 	</form>
 
-		
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 
 	<%@include file="Footer.jsp"%>
 

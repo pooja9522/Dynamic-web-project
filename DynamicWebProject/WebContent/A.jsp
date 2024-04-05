@@ -7,38 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-
-<h3foolow us ></h3>
-  <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
+       <%
+       
+       request.setAttribute("msg1","A");
+       
+       
+        %>
+        
+        <jsp:forward page="B.jsp"></jsp:forward>
 
 </body>
 </html>

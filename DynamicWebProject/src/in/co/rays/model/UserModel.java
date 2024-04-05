@@ -90,15 +90,17 @@ public class UserModel {
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/advance_practical","root","root");
-		PreparedStatement ps=conn.prepareStatement("select*from user where loginId=?and password=?");
+		PreparedStatement ps=conn.prepareStatement("select*from Student where loginId=?and password=?");
 		
 		ps.setString(1,loginId);
 		ps.setString(2, password);
 		ResultSet rs=ps.executeQuery();
 		UserBean bean=null;
 		
+		
+		
 		while (rs.next()) {
-			bean=new UserBean();
+		   bean =new UserBean();
 			bean.setId(rs.getInt(1));
 			bean.setFirstName(rs.getString(2));
 			bean.setLastName(rs.getString(3));
@@ -165,7 +167,7 @@ public class UserModel {
 	public List search(UserBean bean,int pageNo,int pageSize) throws Exception{
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/advance_practical","root","root");
-		StringBuffer sql=new StringBuffer("select *from User where 1=1");
+		StringBuffer sql=new StringBuffer("select *from User where 1=1");//sql injection
 		
 		if(bean != null) {
 			
@@ -179,6 +181,7 @@ public class UserModel {
 		
 		if(pageSize>0) {
 			pageNo=(pageNo-1)*pageSize;
+			
 			sql.append(" limit " +pageNo+","+ pageSize);
 		}
 		 System.out.println("sql=>"+sql);

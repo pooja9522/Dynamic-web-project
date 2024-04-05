@@ -21,7 +21,6 @@ public class LoginCtl extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	
-	//	resp.sendRedirect("LoginView.jsp");
 		
 		String op= req.getParameter("operation");
 		if(op != null) {

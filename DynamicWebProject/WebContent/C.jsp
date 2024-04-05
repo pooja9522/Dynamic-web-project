@@ -7,38 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<h3foolow us ></h3>
-  <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
+       
+       <%=request.getAttribute("msg1") %>
+       <%=request.getAttribute("msg2") %>
 
 </body>
 </html>

@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <%
 		String fname = request.getParameter("firstName");
 		String lname = request.getParameter("lastName");

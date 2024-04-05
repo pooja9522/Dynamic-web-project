@@ -19,14 +19,17 @@ public class TestUser {
 		//testDelete();
 	    //testFindByPk();
 		//testSearch();
-	//	testAuthenticate();
+	//testAuthenticate();
 		//testSearch();
-		testNextPk();
+		//testNextPk();
 		
 		
 		
 		
-	}	
+		
+	}
+	
+	
 		
 		
 		
@@ -161,6 +164,8 @@ public class TestUser {
 		
 		
 		}
+		
+
 		
 		
 

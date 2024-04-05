@@ -7,38 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<form action="LifeCycleServlet" method="post">
 
+<table>
 
-<h3foolow us ></h3>
-  <hr>
+    <tr>
+    
+    <td><input type="submit"></td>
+
+</tr>
+
+</table>
 
 
 
 
-
-
-
-
-
-
-
-
-
-   
-
+</form>
 
 </body>
 </html>

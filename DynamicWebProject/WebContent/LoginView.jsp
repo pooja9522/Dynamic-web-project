@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-		String msg = (String) request.getAttribute("msg");
+	 	String msg = (String) request.getAttribute("msg");
         String uri = (String) request.getAttribute("uri");
         String login = (String) request.getAttribute("login");
         String pass = (String) request.getAttribute("pass");
@@ -79,24 +79,7 @@
 </form>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 <%@include file="Footer.jsp" %>
 

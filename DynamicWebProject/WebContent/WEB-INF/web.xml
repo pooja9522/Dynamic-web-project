@@ -3,21 +3,47 @@
   <display-name>DynamicWebProject</display-name>
   <session-config><session-timeout>30</session-timeout></session-config>
   <welcome-file-list>
-    <welcome-file></welcome-file>
+    <welcome-file> LoginView.jsp</welcome-file>
     <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    
   </welcome-file-list>
   <servlet>
-    <description></description>
-    <display-name>RedirectFirstServlet</display-name>
-    <servlet-name>RedirectFirstServlet</servlet-name>
+  <servlet-name>HelloCtl</servlet-name>
+    
+    
+    
     <servlet-class>in.co.rays.servalet.FirstServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>RedirectFirstServlet</servlet-name>
-    <url-pattern>/RedirectFirstServlet</url-pattern>
+    <servlet-name>HelloCtl</servlet-name>
+    <url-pattern>/HelloCtl</url-pattern>
   </servlet-mapping>
+  <servlet>
+		<servlet-name>ServletConfigCtl</servlet-name>
+		<servlet-class>in.co.rays.test.ServletConfigCtl</servlet-class>
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>com.mysql.cj.jdbc.Driver</param-value>
+		</init-param>
+		<init-param>
+			<param-name>url</param-name>
+			<param-value>jdbc:mysql://localhost:3306/"root"</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ServletConfigCtl</servlet-name>
+		<url-pattern>/ServletConfigCtl</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/Error404.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/Error500.jsp</location>
+	</error-page>
+
 </web-app>

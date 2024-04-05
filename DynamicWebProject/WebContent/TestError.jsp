@@ -7,38 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-
-<h3foolow us ></h3>
-  <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
+    <%
+    
+       int age = Integer.parseInt(request.getParameter("age"));
+    
+    %>
+    
+    <h1><%=age%></h1>
 
 </body>
 </html>
