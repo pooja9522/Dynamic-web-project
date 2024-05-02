@@ -1,4 +1,5 @@
-<%@ page import="in.co.rays.bean.UserBean"%>
+
+<%@page import="in.co.rays.bean.UserBean"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
 </head>
 <body>
 
-	<%  UserBean user = (UserBean) session.getAttribute("user");
+	<%  UserBean user=(UserBean) session.getAttribute("user");
  
  
  

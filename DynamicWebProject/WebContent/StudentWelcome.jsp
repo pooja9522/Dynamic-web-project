@@ -6,26 +6,18 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
- <hr>
-<h1><center>Welcome to UserModel</center></h1>
- 
+<%@include file = "StudentHeader.jsp" %>
+
+<form action="">
+<h1><center>Welcome</center></h1>
+
+
+</form>
+
+
+<%@include file ="StudentFooter.jsp" %>
+
 </body>
 </html>

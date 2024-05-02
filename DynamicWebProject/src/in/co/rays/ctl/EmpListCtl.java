@@ -12,19 +12,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import in.co.rays.bean.UserBean;
-import in.co.rays.model.UserModel;
+import in.co.rays.bean.EmpBean;
+import in.co.rays.model.EmpModel;
 
-@WebServlet("/UserListCtl.do")
-public class UserListCtl extends HttpServlet {
 
+@WebServlet("/EmpListCtl")
+public class EmpListCtl extends HttpServlet {
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 		int pageNo = 1;
 		int pageSize = 5;
 
-		UserModel model = new UserModel();
+		EmpModel model = new EmpModel();
 
 		try {
 			List list = model.search(null, pageNo, pageSize);
@@ -32,7 +32,7 @@ public class UserListCtl extends HttpServlet {
 			req.setAttribute("list", list);
 			req.setAttribute("nextList", nextList);
 			req.setAttribute("pageNo", pageNo);
-			RequestDispatcher rd = req.getRequestDispatcher("UserListView.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("EmpListView.jsp");
 			rd.forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -40,39 +40,38 @@ public class UserListCtl extends HttpServlet {
 
 	}
 
+		
+	
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-		UserBean bean = null;
+		
+		
+		EmpBean bean = null;
 		int pageNo = Integer.parseInt(req.getParameter("pageNo"));
 		int pageSize = 5;
 
-		UserModel model = new UserModel();
+		EmpModel model = new EmpModel();
 
-		String firstName = req.getParameter("firstName");
+		String ename = req.getParameter("EName");
 		String op = req.getParameter("operation");
 		
-		SimpleDateFormat sdf =new SimpleDateFormat("yyyy-MM-dd");
-		String dob = req.getParameter("dob");
+		
+		
 
 		if (op.equals("search")) {
 			pageNo = 1;
-			bean = new UserBean();
-			bean.setFirstName(firstName);
-			try {
-				bean.setDob(sdf.parse(dob));
-			} catch (ParseException e) {
-				
-				e.printStackTrace();
+			bean = new EmpBean();
+			bean.setEName(ename);
+		
 			}
 			
 			
 			
-		}
+		
 
 		if (op.equals("add")) {
-			resp.sendRedirect("UserCtl.do");
+			resp.sendRedirect("EmpCtl");
 		}
 
 		if (op.equals("next")) {
@@ -104,12 +103,16 @@ public class UserListCtl extends HttpServlet {
 			req.setAttribute("list", list);
 			req.setAttribute("nextList", nextList);
 			req.setAttribute("pageNo", pageNo);
-			RequestDispatcher rd = req.getRequestDispatcher("UserListView.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("EmpListView.jsp");
 			rd.forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
+
+		
+		
+	
 	}
 
 }

@@ -3,6 +3,7 @@ package in.co.rays.model;
 
 import java.sql.Connection;
 
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -90,7 +91,7 @@ public class UserModel {
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/advance_practical","root","root");
-		PreparedStatement ps=conn.prepareStatement("select*from Student where loginId=?and password=?");
+		PreparedStatement ps=conn.prepareStatement("select*from user where loginId=?and password=?");
 		
 		ps.setString(1,loginId);
 		ps.setString(2, password);

@@ -15,13 +15,14 @@ public class TestStudent {
 	
 	public static void main(String[] args) throws Exception {
 		//testNextPk();
-		//testAdd();
-		//testUpdate();
+		
+		testAdd();
+      //testUpdate();
 		//testDelete();
 		//testFindByPk();
 		//testAutenticate();
 		//testSearchSimple();
-		testSearch();
+		//testSearch();
 		
 	}
 	
@@ -77,7 +78,7 @@ public class TestStudent {
 
 	private static void testAutenticate() throws Exception {
 		StudentModel model = new StudentModel();
-		StudentBean bean =model.authenticate("shushila@gmail.com","1234");
+		StudentBean bean =model.authenticate("vishnu@gmail.com","1234");
 		
 		if(bean != null) {
 		System.out.println(bean.getId());
@@ -116,7 +117,7 @@ public class TestStudent {
 
 	private static void testUpdate() throws Exception {
 StudentBean bean = new StudentBean();
-		bean.setId(1);
+		bean.setId(2);
 		bean.setFirstName("shushila");
 		bean.setLastName("Davi");
 		bean.setLoginId("shushila@gmail.com");

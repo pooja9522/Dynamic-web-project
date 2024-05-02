@@ -4,6 +4,8 @@ package in.co.rays.test;
 
 import java.util.Date;
 
+
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -17,9 +19,9 @@ public class TestUser {
 		//testAdd();
 		//testUpdate();
 		//testDelete();
-	    //testFindByPk();
-		//testSearch();
-	//testAuthenticate();
+	   // testFindByPk();
+		testSearch();
+//	testAuthenticate();
 		//testSearch();
 		//testNextPk();
 		
@@ -74,19 +76,19 @@ public class TestUser {
 		private static void testSearch() throws Exception {
 			
 			UserBean bean=new UserBean();
-			bean.setFirstName("R");
+			bean.setFirstName("p");
 			UserModel model=new UserModel();
 			List list=model.search(bean,1,3);
 			Iterator it= list.iterator();
 			
 			while(it.hasNext()) {
 				bean=(UserBean) it.next();
-			System.out.println(bean.getId());
-			System.out.println("\t"+bean.getFirstName());
-			System.out.println("\t"+ bean.getLastName());
-			System.out.println("\t"+bean.getLoginId());
-			System.out.println("\t"+bean.getPassword());
-			System.out.println("\t"+bean.getDob());
+			System.out.print("\t"+bean.getId());
+			System.out.print("\t"+bean.getFirstName());
+			System.out.print("\t"+ bean.getLastName());
+			System.out.print("\t"+bean.getLoginId());
+			System.out.print("\t"+bean.getPassword());
+			System.out.print("\t" +bean.getDob());
 			System.out.println("\t"+bean.getAddress());
 			}
 			
@@ -130,10 +132,10 @@ public class TestUser {
 		private static void testUpdate() throws Exception {
 			UserBean bean =new UserBean();
 			
-			bean.setId(3);
-			bean.setFirstName("Rahul");
-			bean.setLastName("padiyaar");
-			bean.setLoginId("rahul@gmail.com");
+			bean.setId(1);
+			bean.setFirstName("laxman");
+			bean.setLastName("patel");
+			bean.setLoginId("laxman@gmail.com");
 			bean.setPassword("1234");
 			bean.setDob(new Date());
 			bean.setAddress("sehore");
@@ -151,7 +153,7 @@ public class TestUser {
 			
 			UserBean bean=new UserBean();
 		
-		bean.setFirstName("maan");
+		bean.setFirstName("laxman");
 		bean.setLastName("patel");
 		bean.setLoginId("laxman@gmail.com");
 		bean.setPassword("1234");

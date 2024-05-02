@@ -22,10 +22,8 @@
 <br>
 <br>
 <br>
-<br>
-<br>
- <hr>
-<h1><center>Welcome to UserModel</center></h1>
- 
+<hr>
+ <h1><center>New One StudentModel</center></h1>
+
 </body>
 </html>

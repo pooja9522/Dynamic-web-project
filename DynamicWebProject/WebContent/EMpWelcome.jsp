@@ -7,25 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
- <hr>
-<h1><center>Welcome to UserModel</center></h1>
- 
+  <%@ include file="EmpHeader.jsp"%>
+		<h1 align="Center">
+			<font size="10px" color="red">Welcome to Employee Data</font>
+		</h1>
+  
 </body>
 </html>

@@ -7,25 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
- <hr>
-<h1><center>Welcome to UserModel</center></h1>
- 
+<h1>Hi, Guest</h1>
+
+
+<a href="EmpCtl">AddEmp</a>
+<a href="EmpListCtl">EmpList</a>
+<hr>
+<%@ include file ="EmpFooter.jsp" %>
+
 </body>
 </html>

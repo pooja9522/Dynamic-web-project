@@ -32,7 +32,7 @@ public class StudentModel {
 		int pk =nextPk();
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/advance_practical","root","root");
-		PreparedStatement ps = conn.prepareStatement("insert into Student Values(?,?,?,?,?,?,?)");
+		PreparedStatement ps = conn.prepareStatement("insert into student Values(?,?,?,?,?,?,?)");
 		
 		ps.setInt(1, pk);
 		ps.setString(2, bean.getFirstName());
@@ -41,6 +41,7 @@ public class StudentModel {
 		ps.setString(5, bean.getPassword());
 		ps.setDate(6, new java.sql.Date(bean.getDob().getTime()));
 		ps.setString(7, bean.getAddress());
+		
 		
 		int i =ps. executeUpdate();
 		
@@ -52,7 +53,7 @@ public class StudentModel {
 		int pk =nextPk();
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/advance_practical","root","root");
-		PreparedStatement ps = conn.prepareStatement("update Student set First_name=?,Last_name=?,Login_id=?,password=?,dob=?,Address=? where id=?");
+		PreparedStatement ps = conn.prepareStatement("update student set first_name=?,last_name=?,loginId=?,password=?,dob=?,address=? where id=?");
 		
 		
 		ps.setString(1, bean.getFirstName());
@@ -89,7 +90,7 @@ public class StudentModel {
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/advance_practical","root","root");
-		PreparedStatement ps = conn.prepareStatement("select*from Student where id =?");
+		PreparedStatement ps = conn.prepareStatement("select*from student where id =?");
 		
 		ps.setInt(1, id);
 		ResultSet rs = ps.executeQuery();
@@ -120,7 +121,7 @@ public StudentBean authenticate(String loginId,String password) throws Exception
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/advance_practical","root","root");
-		PreparedStatement ps = conn.prepareStatement("select*from Student where login_Id =? and password=?");
+		PreparedStatement ps = conn.prepareStatement("select*from student where loginId =? and password=?");
 		
 		ps.setString(1, loginId);
 		ps.setString(2, password);
@@ -152,7 +153,7 @@ public List searchSimple() throws Exception {
 	
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/advance_practical","root","root");
-	PreparedStatement ps = conn.prepareStatement("select*from Student ");
+	PreparedStatement ps = conn.prepareStatement("select*from student ");
 	
 	
 	ResultSet rs = ps.executeQuery();
@@ -178,11 +179,12 @@ public List searchSimple() throws Exception {
 }
 
 
-public List search(StudentBean bean,int pageNo,int pageSize) throws Exception{ {
+public List search(StudentBean bean,int pageNo,int pageSize) throws Exception{ 
+
 
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/advance_practical","root","root");
-	StringBuffer sql=new StringBuffer("select *from User where 1=1");//sql injection
+	StringBuffer sql=new StringBuffer("select *from student where 1=1");//sql injection
 	
 	if(bean != null) {
 		
@@ -222,6 +224,6 @@ public List search(StudentBean bean,int pageNo,int pageSize) throws Exception{ {
 }
 
 
-}
+
 	
 	
